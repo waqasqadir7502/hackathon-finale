@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import './signin.css';
-import { Link } from "react-router-dom";
 import { auth, signInWithEmailAndPassword, onAuthStateChanged } from "../../config/firebase"
 import {useNavigate} from "react-router-dom";
+import Logo from './LogoKhanaSabkliye-01.png'
 
 function SignIn() {
     const [email, setEmail] = useState('')
@@ -40,6 +40,10 @@ function SignIn() {
     },[])
     
     return (
+        <>
+        <div className="logo-header">
+        <img src={Logo} alt="logo" className="header-logo" />
+        </div>
         <div className="signin-div">
             <div className="col-1">
                 <div className="signinform">
@@ -52,16 +56,17 @@ function SignIn() {
                     </label>
                     <br />
                     <button onClick={LogIn}>Log In</button>
-                    <hr />
-                    <p className="signup-here">Dont Have An Account ? <Link to="./signup"><span > Sign Up Here!</span></Link> </p>
+                    <hr className="signin-hr" />
+                    <button className="forgot-btn">Forgot Pasword</button>
                 </div>
             </div>
             <div className="col-2">
                 <div className="signin-heading">
-                    <h1>This is Login Page</h1>
+                    <img src={Logo} alt="logo" className="logo"/>
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

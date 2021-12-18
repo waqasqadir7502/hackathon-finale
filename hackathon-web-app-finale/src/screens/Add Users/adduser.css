@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/************************************************************************************ Header **************************************************************************************/
+
+.header-container {
+    position: sticky;
+    height: 120px;
+    width: 100%;
+    box-shadow: 0px 0px 10px grey;
+}
+
+#logo {
+    width: 120px;
+    margin: 0px 0px 0px 30px;
+}
+
+#active-a {
+    background-color: #0e73b7;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+#active-li {
+    color: white;
+}
+
+.nav-bar {
+    float: right;
+    margin: 40px 20px 0px 0px;
+}
+
+.nav-li {
+    display: inline;
+    font-size: 14px;
+    color: #0e73b7;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.4s ease;
+}
+.nav-li:hover{
+    color: white;
+    background-color: #0e73b7;
+    transition: 0.4s ease;
+}
+
+.logout-btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #0e73b7;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.logout-btn:hover{
+    background-color: #0e73b7;
+    color: white;
+}
+
+.checkbtn {
+    font-size: 20px;
+    color:  #0e73b7;
+    float: right;
+    margin: 50px 40px 0px 0px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+
+@media (max-width:1025px) {
+    #logo {
+        width: 110px;
+        margin: 10px 0px 0px 30px;
+    }
+    .nav-li {
+        font-size: 16px;
+    }
+    .nav-bar {
+        margin: 40px 30px 0px 0px;
+    }
+}
+
+@media (max-width:837px) {
+    .checkbtn {
+        display: block;
+    }
+    .nav-bar {
+        position: fixed;
+        width: 100%;
+        height: 280px;
+        top: 140px;
+        margin: s0;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        background-color: white;
+    }
+    .nav-ul {
+        display: block;
+    }
+    .nav-li {
+        color: grey;
+        display: block;
+        padding: 10px;
+    }
+    .logout-btn{
+        color: grey;
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+    .nav-li:hover {
+        color: white;
+    }
+    #active-a {
+        background-color: transparent;
+    }
+    #active-li {
+        color: #0e73b7;
+    }
+    #active-li:hover {
+        color: white;
+    }
+    .nav-link {
+        margin: 0px;
+        padding: 0;
+        display: block;
+    }
+    .nav-link:hover {
+        background-color: transparent;
+    }
+    #check:checked~.nav-bar {
+        left: 0;
+    }
+}
+
+
+
+/* Body */
+
+.adduser-div{
+    width: 100%;
+}
+.adduserform{
+    width: 30%;
+    margin: 50px auto;
+   box-shadow: 0px 0px 10px grey;
+    height: 350px;
+    padding: 20px;
+}
+.adduserform input{
+    padding: 10px;
+    width: 100%;
+    border:1px solid ;
+    margin:10px 0px;
+}
+
+.adduserform button{
+    background-color: #0e73b7;
+    color: white;
+    border: 2px solid #0e73b7;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    padding: 10px 30px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.adduserform button:hover{
+    border: 2px solid #0e73b7;
+    background-color: white;
+    color: #0e73b7;
+    transition: 0.5s ease;
+    padding: 10px 30px;
+
+}
+.adduser-heading{
+    text-align: center;
+}
+.adduser-here{
+    text-align: center;
+}
+.adduser-here span{
+    text-decoration: none;
+    color: grey;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.adduser-here span:hover{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.col-1{
+    text-align: left;
+}
+.adduser-h1{
+    margin: 40px;
+    color: #0e73b7;
+    text-align: center;
+}
+.or{
+    text-align: center;
+}
+@media screen and (max-width:1024px) {
+    .adduserform{
+        width: 80%;
+        margin: 0 auto;
+       box-shadow: 0px 0px 10px grey;
+        height: 370px;
+        padding: 20px;
+    }
+}
+@media screen and (max-width:425px) {
+    .adduser-div{
+        width: 100%;
+    }
+}
+
+
+/* footer */
+.footer{
+    position: static;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    padding: 20px;
+    background-color: #0e73b7;
+}
+.footer-p{
+    text-align: center;
+    color: white;
+    margin: 10px ;
+}
