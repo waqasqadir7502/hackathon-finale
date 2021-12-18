@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+/************************************************************************************ Header **************************************************************************************/
+
+.header-container {
+    position: sticky;
+    height: 140px;
+    width: 100%;
+    box-shadow: 0px 0px 10px grey;
+}
+
+#logo {
+    width: 130px;
+    margin: 10px 0px 0px 30px;
+}
+
+#active-a {
+    background-color: coral;
+}
+
+#active-li {
+    color: white;
+}
+
+.nav-bar {
+    float: right;
+    margin: 50px 40px 0px 0px;
+}
+
+.nav-li {
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    color: coral;
+}
+
+.nav-li:hover {
+    color: white;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    background-color: coral;
+}
+
+#search-bar {
+    padding: 10px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.search-btn {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid grey;
+    cursor: pointer;
+}
+
+.fa-search {
+    color: gray;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: grey;
+    float: right;
+    margin: 50px 40px 0px 0px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width:1025px) {
+    #logo {
+        width: 110px;
+        margin: 10px 0px 0px 30px;
+    }
+    .nav-li {
+        font-size: 18px;
+    }
+    .nav-link {
+        margin: 10px;
+    }
+    .nav-bar {
+        margin: 50px 30px 0px 0px;
+    }
+}
+
+@media (max-width:837px) {
+    .checkbtn {
+        display: block;
+    }
+    .nav-bar {
+        position: fixed;
+        width: 100%;
+        height: 280px;
+        top: 140px;
+        margin: 0;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        background-image: url('Index Page images/dropdown banner.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    .nav-ul {
+        display: block;
+    }
+    .nav-li {
+        color: grey;
+        display: block;
+        padding: 10px;
+    }
+    .nav-li:hover {
+        color: coral;
+    }
+    #active-a {
+        background-color: transparent;
+    }
+    #active-li {
+        color: coral;
+    }
+    .nav-link {
+        margin: 0px;
+        padding: 0;
+        display: block;
+    }
+    .nav-link:hover {
+        background-color: transparent;
+    }
+    #check:checked~.nav-bar {
+        left: 0;
+    }
+    .fa-search {
+        color: white;
+    }
+    .search-btn {
+        border-left: 1px solid white;
+    }
+}
+
+/************************************************************************************ Header **************************************************************************************/
